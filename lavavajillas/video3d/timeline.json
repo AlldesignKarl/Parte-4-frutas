@@ -1,0 +1,675 @@
+{
+ "total": 159.988,
+ "fps": 30,
+ "speed": 1.0,
+ "planos": [
+  {
+   "n": 1,
+   "lugar": "Dentro del lavavajillas",
+   "ini": 0.0,
+   "fin": 4.718,
+   "vo_ini": 0.35,
+   "vo_fin": 4.268
+  },
+  {
+   "n": 2,
+   "lugar": "Cartela de título",
+   "ini": 4.718,
+   "fin": 8.177,
+   "vo_ini": 5.068,
+   "vo_fin": 7.727
+  },
+  {
+   "n": 3,
+   "lugar": "La vajilla sucia",
+   "ini": 8.177,
+   "fin": 13.321,
+   "vo_ini": 8.527,
+   "vo_fin": 12.871
+  },
+  {
+   "n": 4,
+   "lugar": "Descalcificador (macro)",
+   "ini": 13.321,
+   "fin": 21.324,
+   "vo_ini": 13.671,
+   "vo_fin": 20.874
+  },
+  {
+   "n": 5,
+   "lugar": "Fondo de la cuba",
+   "ini": 21.324,
+   "fin": 26.468,
+   "vo_ini": 21.674,
+   "vo_fin": 26.018
+  },
+  {
+   "n": 6,
+   "lugar": "Brazo aspersor",
+   "ini": 26.468,
+   "fin": 32.978,
+   "vo_ini": 26.818,
+   "vo_fin": 32.528
+  },
+  {
+   "n": 7,
+   "lugar": "Prelavado (cámara lenta)",
+   "ini": 32.978,
+   "fin": 37.011,
+   "vo_ini": 33.328,
+   "vo_fin": 36.561
+  },
+  {
+   "n": 8,
+   "lugar": "Filtro",
+   "ini": 37.011,
+   "fin": 41.132,
+   "vo_ini": 37.361,
+   "vo_fin": 40.682
+  },
+  {
+   "n": 9,
+   "lugar": "Bajando al sensor",
+   "ini": 41.132,
+   "fin": 45.742,
+   "vo_ini": 41.482,
+   "vo_fin": 45.292
+  },
+  {
+   "n": 10,
+   "lugar": "Sensor de turbidez (macro)",
+   "ini": 45.742,
+   "fin": 50.161,
+   "vo_ini": 46.092,
+   "vo_fin": 49.711
+  },
+  {
+   "n": 11,
+   "lugar": "Sensor: agua turbia",
+   "ini": 50.161,
+   "fin": 55.3,
+   "vo_ini": 50.511,
+   "vo_fin": 54.85
+  },
+  {
+   "n": 12,
+   "lugar": "Sigue lavando",
+   "ini": 55.3,
+   "fin": 60.737,
+   "vo_ini": 55.65,
+   "vo_fin": 60.287
+  },
+  {
+   "n": 13,
+   "lugar": "Sensor: agua limpia",
+   "ini": 60.737,
+   "fin": 67.545,
+   "vo_ini": 61.087,
+   "vo_fin": 67.095
+  },
+  {
+   "n": 14,
+   "lugar": "Panel de mandos",
+   "ini": 67.545,
+   "fin": 72.809,
+   "vo_ini": 67.895,
+   "vo_fin": 72.359
+  },
+  {
+   "n": 15,
+   "lugar": "Cajetín del detergente",
+   "ini": 72.809,
+   "fin": 75.887,
+   "vo_ini": 73.159,
+   "vo_fin": 75.437
+  },
+  {
+   "n": 16,
+   "lugar": "El agua se calienta",
+   "ini": 75.887,
+   "fin": 81.16,
+   "vo_ini": 76.237,
+   "vo_fin": 80.71
+  },
+  {
+   "n": 17,
+   "lugar": "Enzimas: huevo y arroz",
+   "ini": 81.16,
+   "fin": 89.291,
+   "vo_ini": 81.51,
+   "vo_fin": 88.841
+  },
+  {
+   "n": 18,
+   "lugar": "Desagüe",
+   "ini": 89.291,
+   "fin": 93.773,
+   "vo_ini": 89.641,
+   "vo_fin": 93.323
+  },
+  {
+   "n": 19,
+   "lugar": "Aclarado",
+   "ini": 93.773,
+   "fin": 99.475,
+   "vo_ini": 94.123,
+   "vo_fin": 99.025
+  },
+  {
+   "n": 20,
+   "lugar": "Abrillantador",
+   "ini": 99.475,
+   "fin": 103.595,
+   "vo_ini": 99.825,
+   "vo_fin": 103.145
+  },
+  {
+   "n": 21,
+   "lugar": "Condensación",
+   "ini": 103.595,
+   "fin": 109.807,
+   "vo_ini": 103.945,
+   "vo_fin": 109.357
+  },
+  {
+   "n": 22,
+   "lugar": "Puerta automática",
+   "ini": 109.807,
+   "fin": 115.591,
+   "vo_ini": 110.157,
+   "vo_fin": 115.141
+  },
+  {
+   "n": 23,
+   "lugar": "Panel: elegir programa",
+   "ini": 115.591,
+   "fin": 121.098,
+   "vo_ini": 115.941,
+   "vo_fin": 120.648
+  },
+  {
+   "n": 24,
+   "lugar": "Modo Intensivo",
+   "ini": 121.098,
+   "fin": 124.941,
+   "vo_ini": 121.448,
+   "vo_fin": 124.491
+  },
+  {
+   "n": 25,
+   "lugar": "Modo Delicado",
+   "ini": 124.941,
+   "fin": 128.912,
+   "vo_ini": 125.291,
+   "vo_fin": 128.462
+  },
+  {
+   "n": 26,
+   "lugar": "Modo Rápido y Auto",
+   "ini": 128.912,
+   "fin": 133.886,
+   "vo_ini": 129.262,
+   "vo_fin": 133.436
+  },
+  {
+   "n": 27,
+   "lugar": "Modo Eco",
+   "ini": 133.886,
+   "fin": 140.694,
+   "vo_ini": 134.236,
+   "vo_fin": 140.244
+  },
+  {
+   "n": 28,
+   "lugar": "Cocina: el error",
+   "ini": 140.694,
+   "fin": 148.612,
+   "vo_ini": 141.044,
+   "vo_fin": 148.162
+  },
+  {
+   "n": 29,
+   "lugar": "Cocina: rascar",
+   "ini": 148.612,
+   "fin": 152.71,
+   "vo_ini": 148.962,
+   "vo_fin": 152.26
+  },
+  {
+   "n": 30,
+   "lugar": "Final: se abre la puerta",
+   "ini": 152.71,
+   "fin": 159.988,
+   "vo_ini": 153.06,
+   "vo_fin": 157.938
+  }
+ ],
+ "subs": [
+  {
+   "a": 0.35,
+   "b": 4.388,
+   "texto": "Esto es lo que pasa dentro de tu\nlavavajillas cuando cierras la puerta."
+  },
+  {
+   "a": 5.068,
+   "b": 7.847,
+   "texto": "Y te aviso: es mucho más\nlisto de lo que crees."
+  },
+  {
+   "a": 8.527,
+   "b": 12.991,
+   "texto": "Huevo, tomate, arroz, café... y cada\nmancha se quita de una forma distinta."
+  },
+  {
+   "a": 13.671,
+   "b": 16.954,
+   "texto": "Entra el agua, pero antes\npasa por el descalcificador:"
+  },
+  {
+   "a": 16.954,
+   "b": 20.994,
+   "texto": "una resina que atrapa la cal.\nLa sal que le echas sirve para limpiarla."
+  },
+  {
+   "a": 21.674,
+   "b": 26.138,
+   "texto": "Y usa poquísima agua: tres o cuatro\nlitros, que se reciclan una y otra vez."
+  },
+  {
+   "a": 26.818,
+   "b": 30.804,
+   "texto": "La bomba lanza el agua a los\nbrazos aspersores, que giran solos,"
+  },
+  {
+   "a": 30.804,
+   "b": 32.648,
+   "texto": "empujados por sus propios chorros."
+  },
+  {
+   "a": 33.328,
+   "b": 36.681,
+   "texto": "Prelavado: agua fría que\narranca todo lo que está suelto."
+  },
+  {
+   "a": 37.361,
+   "b": 40.802,
+   "texto": "Los restos caen al filtro,\ny así no vuelven a los platos."
+  },
+  {
+   "a": 41.482,
+   "b": 45.412,
+   "texto": "Y aquí viene lo más listo:\nmuchos llevan un sensor de turbidez."
+  },
+  {
+   "a": 46.092,
+   "b": 49.831,
+   "texto": "Una luz atraviesa el agua,\ny un receptor mide cuánta llega."
+  },
+  {
+   "a": 50.511,
+   "b": 54.97,
+   "texto": "Si el agua sale turbia, llega poca luz:\na la vajilla aún le queda suciedad..."
+  },
+  {
+   "a": 55.65,
+   "b": 59.384,
+   "texto": "...así que sigue: cambia el agua,\ncalienta más o alarga el lavado."
+  },
+  {
+   "a": 59.384,
+   "b": 60.407,
+   "texto": "Y vuelve a medir."
+  },
+  {
+   "a": 61.087,
+   "b": 64.707,
+   "texto": "Pero si sale limpia, la luz\npasa entera: ya no queda nada."
+  },
+  {
+   "a": 64.707,
+   "b": 67.215,
+   "texto": "Salta a la siguiente fase,\nsin gastar de más."
+  },
+  {
+   "a": 67.895,
+   "b": 71.61,
+   "texto": "Por eso el programa Auto no siempre\ndura lo mismo: no mira el reloj..."
+  },
+  {
+   "a": 71.61,
+   "b": 72.479,
+   "texto": "mira el agua."
+  },
+  {
+   "a": 73.159,
+   "b": 75.557,
+   "texto": "Se abre el cajetín y cae la pastilla,"
+  },
+  {
+   "a": 76.237,
+   "b": 80.83,
+   "texto": "mientras el agua se calienta: de cuarenta\na setenta grados, según el programa."
+  },
+  {
+   "a": 81.51,
+   "b": 84.916,
+   "texto": "Y entran las enzimas:\nunas deshacen las proteínas del huevo;"
+  },
+  {
+   "a": 84.916,
+   "b": 88.961,
+   "texto": "otras, el almidón del arroz.\nY el oxígeno activo blanquea el café."
+  },
+  {
+   "a": 89.641,
+   "b": 93.443,
+   "texto": "Con el visto bueno del sensor,\nel desagüe se lleva el agua sucia."
+  },
+  {
+   "a": 94.123,
+   "b": 98.165,
+   "texto": "Entra agua limpia para aclarar,\ny en el último aclarado, bien caliente,"
+  },
+  {
+   "a": 98.165,
+   "b": 99.145,
+   "texto": "el abrillantador..."
+  },
+  {
+   "a": 99.825,
+   "b": 103.265,
+   "texto": "...que hace que el agua resbale\nen lámina, sin gotas ni manchas."
+  },
+  {
+   "a": 103.945,
+   "b": 105.726,
+   "texto": "Para secar, física pura:"
+  },
+  {
+   "a": 105.726,
+   "b": 109.477,
+   "texto": "el vapor se condensa en las paredes,\nmás frías, y resbala al fondo."
+  },
+  {
+   "a": 110.157,
+   "b": 113.167,
+   "texto": "Algunos usan zeolita,\nque atrapa la humedad;"
+  },
+  {
+   "a": 113.167,
+   "b": 115.261,
+   "texto": "otros abren la puerta solos al terminar."
+  },
+  {
+   "a": 115.941,
+   "b": 118.273,
+   "texto": "¿Y los programas?\nJuegan con cuatro cartas:"
+  },
+  {
+   "a": 118.273,
+   "b": 120.768,
+   "texto": "química, calor,\ntiempo y fuerza del agua."
+  },
+  {
+   "a": 121.448,
+   "b": 124.611,
+   "texto": "Intensivo: setenta grados\npara ollas y sartenes."
+  },
+  {
+   "a": 125.291,
+   "b": 128.582,
+   "texto": "Delicado: unos cuarenta,\ny agua suave para las copas."
+  },
+  {
+   "a": 129.262,
+   "b": 133.556,
+   "texto": "Rápido: menos de una hora, para poca\nsuciedad. Y Auto... decide el sensor."
+  },
+  {
+   "a": 134.236,
+   "b": 136.548,
+   "texto": "¿Y Eco? Tarda más, pero gasta menos:"
+  },
+  {
+   "a": 136.548,
+   "b": 140.364,
+   "texto": "calienta menos el agua, que es lo que\nmás consume... y lava más despacio."
+  },
+  {
+   "a": 141.044,
+   "b": 143.498,
+   "texto": "Un consejo: no aclares los platos antes."
+  },
+  {
+   "a": 143.498,
+   "b": 147.165,
+   "texto": "Si el agua sale limpia, el sensor\ncree que no hay nada que lavar..."
+  },
+  {
+   "a": 147.165,
+   "b": 148.282,
+   "texto": "y lava más flojo."
+  },
+  {
+   "a": 148.962,
+   "b": 152.38,
+   "texto": "Rasca los restos a la basura,\ny deja que él haga el resto."
+  },
+  {
+   "a": 153.06,
+   "b": 156.363,
+   "texto": "Unos litros, un poco de química\ny un sensor que mira el agua."
+  },
+  {
+   "a": 156.363,
+   "b": 158.058,
+   "texto": "¿Qué aparato abrimos ahora?"
+  }
+ ],
+ "graf": [
+  {
+   "file": "G01_titulo.png",
+   "slug": "titulo",
+   "a": 4.968,
+   "b": 8.127
+  },
+  {
+   "file": "G02_manchas.png",
+   "slug": "manchas",
+   "a": 8.427,
+   "b": 13.271
+  },
+  {
+   "file": "G03_descalcificador.png",
+   "slug": "descalcificador",
+   "a": 13.571,
+   "b": 21.274
+  },
+  {
+   "file": "G04_litros.png",
+   "slug": "litros",
+   "a": 21.574,
+   "b": 26.418
+  },
+  {
+   "file": "G05_brazo.png",
+   "slug": "brazo",
+   "a": 26.718,
+   "b": 32.928
+  },
+  {
+   "file": "G06_fase1.png",
+   "slug": "fase1",
+   "a": 33.228,
+   "b": 36.961
+  },
+  {
+   "file": "G07_filtro.png",
+   "slug": "filtro",
+   "a": 37.261,
+   "b": 41.082
+  },
+  {
+   "file": "G08_sensor_esquema.png",
+   "slug": "sensor_esquema",
+   "a": 45.992,
+   "b": 50.111
+  },
+  {
+   "file": "G09_sensor_sucia.png",
+   "slug": "sensor_sucia",
+   "a": 50.411,
+   "b": 55.25
+  },
+  {
+   "file": "G10_sensor_sigue.png",
+   "slug": "sensor_sigue",
+   "a": 55.55,
+   "b": 60.687
+  },
+  {
+   "file": "G11_sensor_limpia.png",
+   "slug": "sensor_limpia",
+   "a": 60.987,
+   "b": 67.495
+  },
+  {
+   "file": "G12_tiempo_a.png",
+   "slug": "tiempo_a",
+   "a": 67.795,
+   "b": 70.506
+  },
+  {
+   "file": "G13_tiempo_b.png",
+   "slug": "tiempo_b",
+   "a": 70.356,
+   "b": 72.759
+  },
+  {
+   "file": "G14_fase2.png",
+   "slug": "fase2",
+   "a": 73.059,
+   "b": 75.837
+  },
+  {
+   "file": "G15_temperatura.png",
+   "slug": "temperatura",
+   "a": 76.137,
+   "b": 81.11
+  },
+  {
+   "file": "G16_enzimas.png",
+   "slug": "enzimas",
+   "a": 81.41,
+   "b": 89.241
+  },
+  {
+   "file": "G17_desague.png",
+   "slug": "desague",
+   "a": 89.541,
+   "b": 93.723
+  },
+  {
+   "file": "G18_fase3.png",
+   "slug": "fase3",
+   "a": 94.023,
+   "b": 99.425
+  },
+  {
+   "file": "G19_abrillantador.png",
+   "slug": "abrillantador",
+   "a": 99.725,
+   "b": 103.545
+  },
+  {
+   "file": "G20_fase4.png",
+   "slug": "fase4",
+   "a": 103.845,
+   "b": 109.757
+  },
+  {
+   "file": "G21_condensacion.png",
+   "slug": "condensacion",
+   "a": 105.626,
+   "b": 109.757
+  },
+  {
+   "file": "G22_secado.png",
+   "slug": "secado",
+   "a": 110.057,
+   "b": 115.541
+  },
+  {
+   "file": "G23_programas.png",
+   "slug": "programas",
+   "a": 115.841,
+   "b": 121.048
+  },
+  {
+   "file": "G24_cuatro_cartas.png",
+   "slug": "cuatro_cartas",
+   "a": 116.577,
+   "b": 121.048
+  },
+  {
+   "file": "G25_modo_intensivo.png",
+   "slug": "modo_intensivo",
+   "a": 121.348,
+   "b": 124.891
+  },
+  {
+   "file": "G26_modo_delicado.png",
+   "slug": "modo_delicado",
+   "a": 125.191,
+   "b": 128.862
+  },
+  {
+   "file": "G27_modo_rapido.png",
+   "slug": "modo_rapido",
+   "a": 129.162,
+   "b": 131.758
+  },
+  {
+   "file": "G28_modo_auto.png",
+   "slug": "modo_auto",
+   "a": 131.608,
+   "b": 133.836
+  },
+  {
+   "file": "G29_modo_eco.png",
+   "slug": "modo_eco",
+   "a": 134.136,
+   "b": 140.644
+  },
+  {
+   "file": "G30_eco_energia.png",
+   "slug": "eco_energia",
+   "a": 136.448,
+   "b": 140.644
+  },
+  {
+   "file": "G31_consejo_no.png",
+   "slug": "consejo_no",
+   "a": 140.944,
+   "b": 148.562
+  },
+  {
+   "file": "G32_consejo_porque.png",
+   "slug": "consejo_porque",
+   "a": 143.141,
+   "b": 148.562
+  },
+  {
+   "file": "G33_consejo_si.png",
+   "slug": "consejo_si",
+   "a": 148.862,
+   "b": 152.66
+  },
+  {
+   "file": "G34_final.png",
+   "slug": "final",
+   "a": 156.074,
+   "b": 159.938
+  }
+ ]
+}

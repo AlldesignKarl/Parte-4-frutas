@@ -1,0 +1,6 @@
+{
+  "name": "lavavajillas-3d",
+  "private": true,
+  "description": "Render 3D del vídeo «Dentro del lavavajillas» (Three.js en Chromium sin cabeza)",
+  "dependencies": { "three": "0.169.0" }
+}

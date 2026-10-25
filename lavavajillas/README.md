@@ -17,10 +17,18 @@ Metemos la cámara dentro de un lavavajillas y vemos, desde dentro y en cámara 
 7. **Los programas:** las 4 cartas (química, calor, tiempo y fuerza) · Intensivo · Delicado · Rápido · Auto · Eco (y por qué tarda más pero gasta menos).
 8. **El consejo:** no aclares los platos antes: el sensor ve agua limpia y lava más flojo. Rasca los restos a la basura.
 
+## 🎬 El vídeo ya hecho (3D)
+
+**[`dentro_del_lavavajillas_3d.mp4`](dentro_del_lavavajillas_3d.mp4)**: versión completa renderizada en 3D, lista para ver y publicar. Vertical 1080×1920 · 24 fps · ≈ 2:40. La cámara va **dentro del lavavajillas**: se ven los brazos aspersores girando y lanzando chorros, el filtro, el descalcificador, el **sensor de turbidez por dentro** (agua turbia → sigue lavando; agua limpia → siguiente fase), el cajetín, el vapor, el secado y los programas, con los gráficos y subtítulos ya puestos, música y efectos.
+
+- La locución es una **voz sintética de prueba** (castellano). Para la versión buena, genera la voz con ElevenLabs siguiendo [`VOCES.md`](VOCES.md) y sustitúyela en CapCut (el texto es el mismo).
+- El código que lo genera está en [`video3d/`](video3d/) por si hay que cambiar algo y volver a renderizar.
+
 ## Archivos
 
 | Archivo | Para qué sirve |
 |---|---|
+| [`dentro_del_lavavajillas_3d.mp4`](dentro_del_lavavajillas_3d.mp4) | El vídeo 3D ya montado (con voz de prueba, música, efectos, gráficos y subtítulos). |
 | [`GUION.md`](GUION.md) | La narración completa, escena a escena, con tiempos. |
 | [`PLANOS.md`](PLANOS.md) | Storyboard plano a plano con **prompt de imagen**, **prompt de animación**, gráfico, voz y sonido. |
 | [`VOCES.md`](VOCES.md) | La voz del narrador para ElevenLabs y todas las frases listas para generar (también la locución entera de una vez). |
@@ -29,8 +37,12 @@ Metemos la cámara dentro de un lavavajillas y vemos, desde dentro y en cámara 
 | [`graficos/`](graficos/) | 34 gráficos PNG transparentes 1080×1920 con todos los textos y esquemas, listos para superponer. |
 | [`graficos/_vista_previa.jpg`](graficos/_vista_previa.jpg) | Hoja de contactos para ver todos los gráficos de un vistazo. |
 | [`graficos/_fuente/`](graficos/_fuente/) | El diseño de los gráficos (HTML) por si hay que cambiar algún texto y volver a exportarlos. |
+| [`video3d/`](video3d/) | El código del vídeo 3D (escena, planos, voz, sonido y montaje) para volver a renderizarlo. |
+| [`_fuente/`](_fuente/) | Los datos de los planos y el script que genera estos documentos y el `.srt`. |
 
-## Cómo producirlo (paso a paso)
+## Cómo producir la versión realista con IA (paso a paso)
+
+Si quieres una versión con imagen fotorrealista (Veo, Kling…), aquí tienes todo el kit:
 
 1. **Fichas** (solo la primera vez): genera las imágenes de `FICHAS.md` y guarda las mejores.
 2. **Imágenes**: genera la imagen de cada plano de `PLANOS.md` subiendo las fichas como referencia.
