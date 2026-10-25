@@ -1,0 +1,206 @@
+[
+ {
+  "file": "G01_titulo.png",
+  "slug": "titulo",
+  "desc": "Título «DENTRO DEL LAVAVAJILLAS · Así lava de verdad»",
+  "plano": 2
+ },
+ {
+  "file": "G02_manchas.png",
+  "slug": "manchas",
+  "desc": "Etiquetas: PROTEÍNA (huevo) · GRASA (tomate) · ALMIDÓN (arroz) · TANINOS (café)",
+  "plano": 3
+ },
+ {
+  "file": "G03_descalcificador.png",
+  "slug": "descalcificador",
+  "desc": "DESCALCIFICADOR · la resina atrapa la cal · la sal la regenera",
+  "plano": 4
+ },
+ {
+  "file": "G04_litros.png",
+  "slug": "litros",
+  "desc": "≈ 3–4 L · se recirculan una y otra vez",
+  "plano": 5
+ },
+ {
+  "file": "G05_brazo.png",
+  "slug": "brazo",
+  "desc": "BRAZO ASPERSOR · gira por reacción, nadie lo empuja",
+  "plano": 6
+ },
+ {
+  "file": "G06_fase1.png",
+  "slug": "fase1",
+  "desc": "Rótulo de fase: FASE 1 · PRELAVADO",
+  "plano": 7
+ },
+ {
+  "file": "G07_filtro.png",
+  "slug": "filtro",
+  "desc": "FILTRO · atrapa los restos",
+  "plano": 8
+ },
+ {
+  "file": "G08_sensor_esquema.png",
+  "slug": "sensor_esquema",
+  "desc": "Esquema: EMISOR → AGUA → RECEPTOR",
+  "plano": 10
+ },
+ {
+  "file": "G09_sensor_sucia.png",
+  "slug": "sensor_sucia",
+  "desc": "HUD: LUZ RECIBIDA 28 % · AGUA TURBIA",
+  "plano": 11
+ },
+ {
+  "file": "G10_sensor_sigue.png",
+  "slug": "sensor_sigue",
+  "desc": "SIGUE LAVANDO: cambia el agua · calienta más · alarga el lavado · vuelve a medir",
+  "plano": 12
+ },
+ {
+  "file": "G11_sensor_limpia.png",
+  "slug": "sensor_limpia",
+  "desc": "HUD: LUZ RECIBIDA 96 % · AGUA LIMPIA → SIGUIENTE FASE",
+  "plano": 13
+ },
+ {
+  "file": "G12_tiempo_a.png",
+  "slug": "tiempo_a",
+  "desc": "TIEMPO RESTANTE 2:15",
+  "plano": 14
+ },
+ {
+  "file": "G13_tiempo_b.png",
+  "slug": "tiempo_b",
+  "desc": "TIEMPO RESTANTE 1:48 · recalculado por el sensor (corta de A a B a mitad de la frase)",
+  "plano": 14
+ },
+ {
+  "file": "G14_fase2.png",
+  "slug": "fase2",
+  "desc": "Rótulo de fase: FASE 2 · LAVADO PRINCIPAL",
+  "plano": 15
+ },
+ {
+  "file": "G15_temperatura.png",
+  "slug": "temperatura",
+  "desc": "Termómetro 40–70 °C",
+  "plano": 16
+ },
+ {
+  "file": "G16_enzimas.png",
+  "slug": "enzimas",
+  "desc": "PROTEASA → proteínas · AMILASA → almidón · OXÍGENO ACTIVO → café y té",
+  "plano": 17
+ },
+ {
+  "file": "G17_desague.png",
+  "slug": "desague",
+  "desc": "BOMBA DE DESAGÜE · fuera el agua sucia",
+  "plano": 18
+ },
+ {
+  "file": "G18_fase3.png",
+  "slug": "fase3",
+  "desc": "Rótulo de fase: FASE 3 · ACLARADO",
+  "plano": 19
+ },
+ {
+  "file": "G19_abrillantador.png",
+  "slug": "abrillantador",
+  "desc": "SIN abrillantador: gotas → manchas · CON: lámina → brillo",
+  "plano": 20
+ },
+ {
+  "file": "G20_fase4.png",
+  "slug": "fase4",
+  "desc": "Rótulo de fase: FASE 4 · SECADO",
+  "plano": 21
+ },
+ {
+  "file": "G21_condensacion.png",
+  "slug": "condensacion",
+  "desc": "CONDENSACIÓN · vajilla caliente + paredes frías",
+  "plano": 21
+ },
+ {
+  "file": "G22_secado.png",
+  "slug": "secado",
+  "desc": "ZEOLITA · atrapa humedad y suelta calor / PUERTA AUTOMÁTICA · deja salir el vapor",
+  "plano": 22
+ },
+ {
+  "file": "G23_programas.png",
+  "slug": "programas",
+  "desc": "Rótulo: LOS PROGRAMAS",
+  "plano": 23
+ },
+ {
+  "file": "G24_cuatro_cartas.png",
+  "slug": "cuatro_cartas",
+  "desc": "Las 4 cartas: QUÍMICA · TEMPERATURA · TIEMPO · FUERZA DEL AGUA",
+  "plano": 23
+ },
+ {
+  "file": "G25_modo_intensivo.png",
+  "slug": "modo_intensivo",
+  "desc": "Tarjeta INTENSIVO · 70 °C · ollas y sartenes",
+  "plano": 24
+ },
+ {
+  "file": "G26_modo_delicado.png",
+  "slug": "modo_delicado",
+  "desc": "Tarjeta DELICADO · 40 °C · copas y cristal",
+  "plano": 25
+ },
+ {
+  "file": "G27_modo_rapido.png",
+  "slug": "modo_rapido",
+  "desc": "Tarjeta RÁPIDO · 45 °C · menos de 1 h",
+  "plano": 26
+ },
+ {
+  "file": "G28_modo_auto.png",
+  "slug": "modo_auto",
+  "desc": "Tarjeta AUTO · 45–65 °C · decide el sensor (entra en «Y Auto...»)",
+  "plano": 26
+ },
+ {
+  "file": "G29_modo_eco.png",
+  "slug": "modo_eco",
+  "desc": "Tarjeta ECO · 50 °C · ≈ 3–4 h · el que menos gasta",
+  "plano": 27
+ },
+ {
+  "file": "G30_eco_energia.png",
+  "slug": "eco_energia",
+  "desc": "Calentar el agua = lo que más gasta → menos grados, más tiempo (entra en «calienta menos»)",
+  "plano": 27
+ },
+ {
+  "file": "G31_consejo_no.png",
+  "slug": "consejo_no",
+  "desc": "✕ NO LOS ACLARES ANTES",
+  "plano": 28
+ },
+ {
+  "file": "G32_consejo_porque.png",
+  "slug": "consejo_porque",
+  "desc": "Agua limpia desde el principio → el sensor lava más flojo (entra en «Si el agua sale limpia»)",
+  "plano": 28
+ },
+ {
+  "file": "G33_consejo_si.png",
+  "slug": "consejo_si",
+  "desc": "✓ RASCA LOS RESTOS A LA BASURA",
+  "plano": 29
+ },
+ {
+  "file": "G34_final.png",
+  "slug": "final",
+  "desc": "¿Qué aparato abrimos ahora? · Te leo en comentarios",
+  "plano": 30
+ }
+]
