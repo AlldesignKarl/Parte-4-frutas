@@ -129,9 +129,9 @@ export function crearPlanos({ TL, frontal, fregadero, resina, sensor }) {
     }) },
     // 17 · enzimas (macro sobre el huevo)
     { estado: (lt, L) => ({
-      cam: cam([-11.5, 22.6, 8.6], [-12, 22, 7.4], [-12, 21.2, 2.4], [-12, 21.2, 2.4], ease(lt / L), 58), extra: { pos: [-8, 26, 9], int: 90 },
+      cam: cam([-11, 24, 22.5], [-12, 22.5, 16], [-12, 21, 2.4], [-12, 21, 2.4], ease(lt / L), 60), extra: { pos: [-7, 30, 19], int: 240 },
       disolver: { idx: 5, v: lerp(0.03, 0.97, ease((lt - 0.6) / 5.6)) }, sucio: 1,
-      burbujas: { dens: 1, c: [-12, 21, 2.9], r: 7.5, alto: 6, vel: 3, tam: 0.22, plano: 'z' },
+      burbujas: { dens: 1, c: [-12, 21, 2.9], r: 6.5, alto: 6, vel: 3, tam: 0.16, plano: 'z' },
       iL: ct(0.35), wL: ct(4), warm: 0.6, vapor: 0.35, niebla: 0.3, led: 1.05,
     }) },
     // 18 · desagüe
