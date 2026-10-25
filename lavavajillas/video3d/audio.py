@@ -84,34 +84,60 @@ def ding(f=1320, d=1.6):
 
 def whoosh(d=1.0, f0=300, f1=3000, g=1.0):
     x = ruido(d); n = len(x)
-    out = np.zeros(n); seg = 2048
-    for i in range(0, n, seg):
-        k = i / n; f = f0 * (f1 / f0) ** k
-        out[i:i + seg] = bp(x[i:i + seg], max(40, f * 0.6), min(SR / 2 - 100, f * 1.6), 1)
-    return out * np.sin(np.pi * np.linspace(0, 1, n)) ** 1.5 * g
+    k = np.linspace(0, 1, n)
+    fc = f0 * (f1 / f0) ** k                       # frecuencia central que barre
+    out = np.zeros(n)
+    centros = np.geomspace(120, 9000, 14)
+    for c in centros:
+        banda = bp(x, c / 1.35, min(SR / 2 - 200, c * 1.35), 2)
+        peso = np.exp(-0.5 * (np.log(fc / c) / 0.45) ** 2)
+        out += banda * peso
+    return out * np.sin(np.pi * k) ** 1.5 * g * 0.6
+
+
+def mod_lento(n, rapidez=3.0, prof=0.5):
+    """Modulación aleatoria suave (ruido filtrado muy grave), entre 1-prof y 1+prof."""
+    m = lp(rng.standard_normal(n), rapidez, 2)
+    m = m / (np.abs(m).max() + 1e-9)
+    return 1 + prof * m
+
+
+def salpicones(d, densidad=35, g=0.5):
+    """Granos cortos de ruido con envolvente Hann: suena a gotas chocando, no a estática."""
+    n = int(d * SR); out = np.zeros(n)
+    for _ in range(int(d * densidad)):
+        m = int((0.012 + rng.random() * 0.03) * SR)
+        i0 = int(rng.random() * max(1, n - m))
+        f0 = 500 + rng.random() * 2200
+        grano = bp(rng.standard_normal(m + 400), f0 * 0.7, f0 * 1.4, 2)[400:] * np.hanning(m)
+        out[i0:i0 + m] += grano * (0.3 + 0.7 * rng.random())
+    return out * g
 
 
 def chorro(d, nivel_fn, brillo=1.0):
-    """Ruido de agua pulverizada: banda media-alta con chapoteo modulado."""
-    x = ruido(d)
-    agua = bp(x, 900, 7000) * 0.6 + bp(x, 250, 900) * 0.35
-    t = np.arange(len(x)) / SR
-    mod = 1 + 0.25 * np.sin(2 * np.pi * 0.9 * t) * np.sin(2 * np.pi * 0.37 * t + 1)
-    salp = hp(ruido(d), 3000) * (rng.random(len(x)) < 0.002) * 6
-    return (agua * mod + lp(salp, 6000) * 0.3) * nivel_fn(t) * brillo
+    """Agua pulverizada: rumor grave-medio que fluctúa + salpicones. Sin agudos de «estática»."""
+    n = int(d * SR)
+    x = rng.standard_normal(n)
+    rumor = lp(hp(np.cumsum(x) * 0.02, 120), 2500, 2)           # ruido marrón: rumor de agua
+    rumor = rumor / (np.abs(rumor).max() + 1e-9)
+    medio = bp(x, 400, 2200, 2) * 0.35
+    t = np.arange(n) / SR
+    agua = (rumor * 0.8 + medio) * mod_lento(n, 2.5, 0.35)
+    return (agua + salpicones(d, 30, 0.9)) * nivel_fn(t) * brillo * 0.55
 
 
 def bomba(d, nivel_fn):
-    t = np.arange(int(d * SR)) / SR
-    f = 98
-    x = np.sin(2 * np.pi * f * t) * 0.5 + np.sin(2 * np.pi * 2 * f * t) * 0.25 + np.sin(2 * np.pi * 3 * f * t + 1) * 0.12
-    x += lp(ruido(d), 300) * 0.4
-    return x * nivel_fn(t)
+    """Motor de la bomba: rumor grave suave (sin zumbido eléctrico)."""
+    n = int(d * SR); t = np.arange(n) / SR
+    x = lp(rng.standard_normal(n), 180, 2) * 2.5 * mod_lento(n, 1.5, 0.15)
+    x += np.sin(2 * np.pi * 49 * t) * 0.12
+    return x * nivel_fn(t) * 0.6
 
 
 def vapor_sss(d, g=1.0):
-    x = hp(ruido(d), 4000) * 0.5 + bp(ruido(d), 1500, 4000) * 0.2
-    return x * env_ad(len(x), d * 0.4, d * 0.3) * g
+    n = int(d * SR)
+    x = lp(hp(ruido(d), 2500), 9000) * 0.35 * mod_lento(n, 2, 0.3)
+    return x * env_ad(n, d * 0.4, d * 0.3) * g
 
 
 def gorgoteo(d):
@@ -129,20 +155,32 @@ def gorgoteo(d):
 
 
 def grifo(d):
-    x = bp(ruido(d), 500, 6000) * 0.6 + lp(ruido(d), 400) * 0.3
-    return x * env_ad(len(x), 0.2, 0.4)
+    n = int(d * SR)
+    x = (bp(ruido(d), 300, 3000) * 0.5 * mod_lento(n, 6, 0.25) + salpicones(d, 45, 0.6))
+    return x * env_ad(n, 0.2, 0.4)
 
 
 def rascar(d):
     t = np.arange(int(d * SR)) / SR
-    x = bp(ruido(d), 2000, 7000) * (0.5 + 0.5 * np.sign(np.sin(2 * np.pi * 2.2 * t)))
+    x = bp(ruido(d), 2000, 7000) * (0.5 + 0.5 * np.sin(2 * np.pi * 2.2 * t)) ** 2
     return x * env_ad(len(t), 0.05, 0.2) * 0.5
 
 
+def burbujitas(d, densidad=40, f=(1800, 4200), g=0.18):
+    """Burbujas: senos cortos que suben de tono, con envolvente suave (sin chasquidos)."""
+    n = int(d * SR); out = np.zeros(n)
+    m = int(0.035 * SR); tt = np.arange(m) / SR
+    env = np.sin(np.pi * np.minimum(tt / 0.004, 1) / 2) ** 2 * np.exp(-tt * 90)
+    for _ in range(int(d * densidad)):
+        i0 = int(rng.random() * (n - m)); f0 = f[0] + rng.random() * (f[1] - f[0])
+        fase = 2 * np.pi * np.cumsum(f0 * (1 + 2.5 * tt / 0.035)) / SR
+        out[i0:i0 + m] += np.sin(fase) * env * (0.4 + 0.6 * rng.random())
+    return out * g
+
+
 def efervescencia(d):
-    t = np.arange(int(d * SR)) / SR
-    x = hp(ruido(d), 5000) * (rng.random(len(t)) < 0.02) * 3
-    return lp(x, 12000) * env_ad(len(t), 0.1, 0.6)
+    x = burbujitas(d, 55) + hp(ruido(d), 6000) * 0.015
+    return x * env_ad(int(d * SR), 0.15, 0.6)
 
 
 # ---------------------------------------------------------------------------
@@ -227,15 +265,15 @@ def efectos():
     e = np.zeros((N, 2))
     # 01 puerta que se cierra, silencio, luz
     poner(e, t_(1, 1.45), clac(1.2), 0.9)
-    n = int(0.9 * SR); tt = np.arange(n) / SR
-    poner(e, t_(1, 2.0), (np.sin(2 * np.pi * 100 * tt) * 0.3 + hp(ruido(0.9), 6000) * 0.05) * env_ad(n, 0.3, 0.4), 0.4)
+    n = int(1.2 * SR); tt = np.arange(n) / SR
+    poner(e, t_(1, 2.0), np.sin(2 * np.pi * 220 * tt) * np.exp(-tt * 2.5) * env_ad(n, 0.25, 0.3) * 0.25 + np.sin(2 * np.pi * 330 * tt) * np.exp(-tt * 3) * env_ad(n, 0.3, 0.3) * 0.15, 0.4)
     # 02 título
     poner(e, t_(2, 0.0), whoosh(1.2, 200, 4000), 0.5)
     poner(e, t_(2, 0.05), bombo(0.6), 0.7)
     # 04 entra el agua
     d = P[4]["fin"] - P[4]["ini"]
     poner(e, t_(4, 0.1), clic(), 0.5)
-    poner(e, t_(4, 0.15), bp(ruido(d), 300, 4000) * env_ad(int(d * SR), 0.3, 1.0) * 0.5, 0.6, -0.3)
+    poner(e, t_(4, 0.15), chorro(d, lambda t: np.ones_like(t)) * env_ad(int(d * SR), 0.3, 1.0) * 1.2, 0.6, -0.3)
     # agua pulverizada + bomba: niveles por plano (inicio, fin)
     niveles = {6: (0, 1), 7: (0.5, 0.5), 8: (0.5, 0.5), 9: (0.4, 0.2), 12: (1.2, 1.2), 15: (0.8, 0.8), 16: (0.9, 1.0), 17: (0.35, 0.35),
                19: (1, 1), 20: (0.3, 0.3), 24: (1.3, 1.3), 25: (0.25, 0.25), 26: (1.1, 1.1), 27: (0.45, 0.45)}
@@ -251,7 +289,8 @@ def efectos():
         poner(e, t_(n_), x * lento, 0.45)
         poner(e, t_(n_), bomba(d, f) * 0.5, 0.35)
     # 08/18 agua cayendo y desagüe
-    poner(e, t_(8), lp(ruido(P[8]["fin"] - P[8]["ini"]), 1200) * 0.4, 0.4)
+    d8 = P[8]["fin"] - P[8]["ini"]
+    poner(e, t_(8), (lp(ruido(d8), 900) * 0.3 * mod_lento(int(d8 * SR), 3, 0.4) + salpicones(d8, 20, 0.5)), 0.4)
     poner(e, t_(18, 0.3), gorgoteo(P[18]["fin"] - P[18]["ini"] - 0.3), 0.6)
     # 09 bajada
     poner(e, t_(9, 0.0), whoosh(P[9]["fin"] - P[9]["ini"], 2500, 150, 1.0), 0.6)

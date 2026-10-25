@@ -50,7 +50,11 @@ def recorta(a, umbral=0.012):
         return a
     i0 = max(0, idx[0] - int(0.03 * SR))
     i1 = min(len(a), idx[-1] + int(0.08 * SR))
-    return a[i0:i1]
+    a = a[i0:i1].copy()
+    fi, fo = int(0.006 * SR), int(0.025 * SR)  # fundidos cortos: evitan chasquidos al cortar
+    a[:fi] *= np.sin(np.linspace(0, np.pi / 2, fi)) ** 2
+    a[-fo:] *= np.cos(np.linspace(0, np.pi / 2, fo)) ** 2
+    return a
 
 
 def peso(t):
